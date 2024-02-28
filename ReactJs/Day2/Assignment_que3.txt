@@ -1,0 +1,20 @@
+A “key” is a special string attribute you need to include when creating lists of elements in React.
+React Keys A key is a unique identifier which is used to identify which items have changed, updated, or deleted from the Lists and to determine which components in a collection needs to be re-rendered.
+
+Keys should be unique among siblings. Avoid using the same key for different elements within the same list.
+Keys should be stable. They should not change between renders unless the identity of the component or element itself changes.
+Avoid using indexes as keys if the order of the items may change, as this can negatively impact performance and cause issues with component state. Use stable IDs whenever possible.
+
+In React, keys play a crucial role when rendering arrays of elements or components. They help React identify which items have changed, are added, or are removed from the array. Here's how keys are involved in array processing in React:
+
+Efficient Updates: When rendering an array of elements or components in React, each item in the array should have a unique key attribute assigned to it. React uses these keys to keep track of each item's identity.
+
+Reconciliation: When the array changes (e.g., items are added, removed, or re-ordered), React performs a process called reconciliation. During reconciliation, React compares the new array with the previous one and updates the UI accordingly.
+
+Identifying Changes: React uses keys to efficiently identify which items have changed, are added, or are removed from the array. If an item's key remains the same between renders, React assumes that the item has not changed. If an item's key is new or has changed, React updates or re-renders that item accordingly.
+
+Preventing Unnecessary Renders: By using keys, React can avoid unnecessary re-renders of items that haven't changed. This optimization improves performance by only updating the elements that actually need to be updated.
+
+Stable Identity: Keys provide a stable identity to each item in the array, even if the order of the array changes. This ensures that React can accurately track which items have changed and update the UI accordingly.
+
+
